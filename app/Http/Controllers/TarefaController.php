@@ -24,7 +24,7 @@ class TarefaController extends Controller
      */
     public function create()
     {
-        //
+        return view('tarefa.create');
     }
 
     /**
@@ -35,7 +35,9 @@ class TarefaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Tarefa::create($request->all());
+        //redireciona para o index da tela de listagem das tarefa
+        return redirect()->route('tarefa.create');
     }
 
     /**
