@@ -18,11 +18,11 @@
                         @csrf
                         <div class="form-group">
                             <label for="tarefa">Tarefa</label>
-                            <input type="text" class="form-control" id="tarefa">
+                            <input type="text" class="form-control" id="tarefa" name="tarefa">
                         </div>
                         <div class="form-group">
                             <label for="data_limite_conclusao">Data limite de Conclusão</label>
-                            <input type="date" class="form-control" id="data_limite_conclusao">
+                            <input type="date" class="form-control" id="data_limite_conclusao" name="data_limite_conclusao" >
                         </div>
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
                     </form>

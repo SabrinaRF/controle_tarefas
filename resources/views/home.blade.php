@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <a href="{{ route('tarefa.create')}}"> Adicionar tarefa</a>
 
-                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>
