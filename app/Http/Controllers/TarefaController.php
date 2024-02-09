@@ -37,7 +37,11 @@ class TarefaController extends Controller
      */
     public function store(Request $request)
     {
-        $tarefa =Tarefa::create($request->all());
+        $dados = $request->all('tarefa','data_limite_conclusao');
+        $dados['user_id']= auth()->user()->id;
+
+        $tarefa =Tarefa::create($dados);
+
         $destinatario= auth()->user()->email; //pega o email do usuario logado
         Mail::to($destinatario)->send(new NovaTarefaMail($tarefa));//envia um email para o destinatário com os dados da nova
         //redireciona para o index da tela de listagem das tarefa
