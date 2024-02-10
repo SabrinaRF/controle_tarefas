@@ -13,8 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="{{ route('tarefa.create')}}"> Adicionar tarefa</a>
-
+                    <a href="{{ route('tarefa.index')}}"> Tarefas</a>
                 </div>
             </div>
         </div>
