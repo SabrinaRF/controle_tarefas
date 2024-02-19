@@ -39,7 +39,7 @@
                         </tbody>
                     </table>
                     <nav>
-                        <ul class="pagination">
+                        <ul class="pagination"><!--terminar depois-->
                             <li class="page-item"><a class="page-link" href="{{$tarefas->previousPageUrl()}}">Voltar</a></li>
                             @for ($i=1; $i <= $tarefas->lastPage();  $i++)
                                 <li class="page-item {{ $tarefas->currentPage() == $i ? 'active' : ''}}">
